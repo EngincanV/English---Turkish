@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="EnglishTurkishModel1StoreContainer" CdmEntityContainer="EnglishTurkishEntities2">
+    <EntitySetMapping Name="tblMusics">
+      <EntityTypeMapping TypeName="EnglishTurkishModel1.tblMusic">
+        <MappingFragment StoreEntitySet="tblMusic">
+          <ScalarProperty Name="musicID" ColumnName="musicID" />
+          <ScalarProperty Name="musicName" ColumnName="musicName" />
+          <ScalarProperty Name="musicPath" ColumnName="musicPath" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

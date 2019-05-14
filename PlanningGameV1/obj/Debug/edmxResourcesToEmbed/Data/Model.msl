@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="EnglishTurkishModelStoreContainer" CdmEntityContainer="EnglishTurkishEntities1">
+    <EntitySetMapping Name="translates">
+      <EntityTypeMapping TypeName="EnglishTurkishModel.translate">
+        <MappingFragment StoreEntitySet="translate">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="english" ColumnName="english" />
+          <ScalarProperty Name="turkish" ColumnName="turkish" />
+          <ScalarProperty Name="type" ColumnName="type" />
+          <ScalarProperty Name="sentence" ColumnName="sentence" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
