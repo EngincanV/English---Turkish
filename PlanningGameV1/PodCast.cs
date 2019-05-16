@@ -41,6 +41,7 @@ namespace PlanningGameV1
         tblMusic d = new tblMusic();
         private void PodCast_Load(object sender, System.EventArgs e)
         {
+            //linq to sql query
             var mucis = from a in db.tblMusics select a;
             foreach (var item in mucis)
             {
