@@ -19,5 +19,6 @@ namespace PlanningGameV1.Data
         public string turkish { get; set; }
         public string type { get; set; }
         public string sentence { get; set; }
+        public Nullable<bool> IsTrue { get; set; }
     }
 }

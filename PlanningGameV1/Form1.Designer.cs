@@ -114,6 +114,7 @@
             this.LearnWordsTile.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.LearnWordsTile.UseSelectable = true;
             this.LearnWordsTile.UseTileImage = true;
+            this.LearnWordsTile.Click += new System.EventHandler(this.LearnWordsTile_Click);
             // 
             // PodcastTile
             // 

@@ -47,5 +47,12 @@ namespace PlanningGameV1
             add.Show();
             this.Hide();
         }
+
+        private void LearnWordsTile_Click(object sender, EventArgs e)
+        {
+            LearnWords l = new LearnWords();
+            l.Show();
+            this.Hide();
+        }
     }
 }

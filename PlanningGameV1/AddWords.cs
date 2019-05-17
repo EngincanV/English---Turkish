@@ -20,7 +20,8 @@ namespace PlanningGameV1
                     english = englishTxt.Text,
                     turkish = turkishTxt.Text,
                     type = typeTxt.Text,
-                    sentence = sentenceTxt.Text
+                    sentence = sentenceTxt.Text,
+                    IsTrue = false,
                 };
                 if (string.IsNullOrWhiteSpace(englishTxt.Text) || string.IsNullOrWhiteSpace(turkishTxt.Text) || string.IsNullOrWhiteSpace(typeTxt.Text) || string.IsNullOrWhiteSpace(sentenceTxt.Text))
                 {
@@ -32,6 +33,10 @@ namespace PlanningGameV1
                     ctx.translates.Add(trans);
                     ctx.SaveChanges();
                     status.Text="You inserted";
+                    englishTxt.Text = "";
+                    sentenceTxt.Text = "";
+                    turkishTxt.Text = "";
+                    typeTxt.Text = "";
                 }
 
             }
