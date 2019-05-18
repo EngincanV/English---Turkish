@@ -70,9 +70,9 @@
             this.metroLabel3.AutoSize = true;
             this.metroLabel3.Location = new System.Drawing.Point(181, 194);
             this.metroLabel3.Name = "metroLabel3";
-            this.metroLabel3.Size = new System.Drawing.Size(85, 20);
+            this.metroLabel3.Size = new System.Drawing.Size(42, 20);
             this.metroLabel3.TabIndex = 2;
-            this.metroLabel3.Text = "Kelime Türü:";
+            this.metroLabel3.Text = "Type:";
             this.metroLabel3.UseCustomBackColor = true;
             this.metroLabel3.UseCustomForeColor = true;
             // 
@@ -82,7 +82,7 @@
             // 
             // 
             this.turkishTxt.CustomButton.Image = null;
-            this.turkishTxt.CustomButton.Location = new System.Drawing.Point(217, 1);
+            this.turkishTxt.CustomButton.Location = new System.Drawing.Point(262, 1);
             this.turkishTxt.CustomButton.Name = "";
             this.turkishTxt.CustomButton.Size = new System.Drawing.Size(21, 21);
             this.turkishTxt.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
@@ -101,7 +101,7 @@
             this.turkishTxt.SelectionLength = 0;
             this.turkishTxt.SelectionStart = 0;
             this.turkishTxt.ShortcutsEnabled = true;
-            this.turkishTxt.Size = new System.Drawing.Size(239, 23);
+            this.turkishTxt.Size = new System.Drawing.Size(284, 23);
             this.turkishTxt.TabIndex = 3;
             this.turkishTxt.UseSelectable = true;
             this.turkishTxt.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
@@ -113,7 +113,7 @@
             // 
             // 
             this.translateTxt.CustomButton.Image = null;
-            this.translateTxt.CustomButton.Location = new System.Drawing.Point(217, 1);
+            this.translateTxt.CustomButton.Location = new System.Drawing.Point(262, 1);
             this.translateTxt.CustomButton.Name = "";
             this.translateTxt.CustomButton.Size = new System.Drawing.Size(21, 21);
             this.translateTxt.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
@@ -132,7 +132,7 @@
             this.translateTxt.SelectionLength = 0;
             this.translateTxt.SelectionStart = 0;
             this.translateTxt.ShortcutsEnabled = true;
-            this.translateTxt.Size = new System.Drawing.Size(239, 23);
+            this.translateTxt.Size = new System.Drawing.Size(284, 23);
             this.translateTxt.TabIndex = 4;
             this.translateTxt.UseSelectable = true;
             this.translateTxt.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
@@ -144,7 +144,7 @@
             // 
             // 
             this.vocabularyTxt.CustomButton.Image = null;
-            this.vocabularyTxt.CustomButton.Location = new System.Drawing.Point(217, 1);
+            this.vocabularyTxt.CustomButton.Location = new System.Drawing.Point(262, 1);
             this.vocabularyTxt.CustomButton.Name = "";
             this.vocabularyTxt.CustomButton.Size = new System.Drawing.Size(21, 21);
             this.vocabularyTxt.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
@@ -163,7 +163,7 @@
             this.vocabularyTxt.SelectionLength = 0;
             this.vocabularyTxt.SelectionStart = 0;
             this.vocabularyTxt.ShortcutsEnabled = true;
-            this.vocabularyTxt.Size = new System.Drawing.Size(239, 23);
+            this.vocabularyTxt.Size = new System.Drawing.Size(284, 23);
             this.vocabularyTxt.TabIndex = 5;
             this.vocabularyTxt.UseSelectable = true;
             this.vocabularyTxt.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
@@ -173,7 +173,7 @@
             // 
             this.fetchBtn.Location = new System.Drawing.Point(346, 337);
             this.fetchBtn.Name = "fetchBtn";
-            this.fetchBtn.Size = new System.Drawing.Size(112, 39);
+            this.fetchBtn.Size = new System.Drawing.Size(141, 39);
             this.fetchBtn.TabIndex = 6;
             this.fetchBtn.Text = "Fetch The Words";
             this.fetchBtn.UseSelectable = true;
@@ -181,9 +181,9 @@
             // 
             // queryBtn
             // 
-            this.queryBtn.Location = new System.Drawing.Point(474, 337);
+            this.queryBtn.Location = new System.Drawing.Point(493, 337);
             this.queryBtn.Name = "queryBtn";
-            this.queryBtn.Size = new System.Drawing.Size(112, 39);
+            this.queryBtn.Size = new System.Drawing.Size(138, 39);
             this.queryBtn.TabIndex = 7;
             this.queryBtn.Text = "Query The Words";
             this.queryBtn.UseSelectable = true;
@@ -226,7 +226,7 @@
             // 
             // 
             this.sentenceTxt.CustomButton.Image = null;
-            this.sentenceTxt.CustomButton.Location = new System.Drawing.Point(179, 1);
+            this.sentenceTxt.CustomButton.Location = new System.Drawing.Point(224, 1);
             this.sentenceTxt.CustomButton.Name = "";
             this.sentenceTxt.CustomButton.Size = new System.Drawing.Size(59, 59);
             this.sentenceTxt.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
@@ -246,7 +246,7 @@
             this.sentenceTxt.SelectionLength = 0;
             this.sentenceTxt.SelectionStart = 0;
             this.sentenceTxt.ShortcutsEnabled = true;
-            this.sentenceTxt.Size = new System.Drawing.Size(239, 61);
+            this.sentenceTxt.Size = new System.Drawing.Size(284, 61);
             this.sentenceTxt.TabIndex = 11;
             this.sentenceTxt.UseSelectable = true;
             this.sentenceTxt.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
@@ -257,9 +257,9 @@
             this.metroLabel5.AutoSize = true;
             this.metroLabel5.Location = new System.Drawing.Point(181, 247);
             this.metroLabel5.Name = "metroLabel5";
-            this.metroLabel5.Size = new System.Drawing.Size(85, 20);
+            this.metroLabel5.Size = new System.Drawing.Size(70, 20);
             this.metroLabel5.TabIndex = 10;
-            this.metroLabel5.Text = "Kelime Türü:";
+            this.metroLabel5.Text = "Sentence:";
             this.metroLabel5.UseCustomBackColor = true;
             this.metroLabel5.UseCustomForeColor = true;
             // 

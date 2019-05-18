@@ -140,6 +140,7 @@
             this.ListMucisUrl.TabIndex = 13;
             this.ListMucisUrl.UseSelectable = true;
             this.ListMucisUrl.Visible = false;
+            this.ListMucisUrl.SelectedIndexChanged += new System.EventHandler(this.ListMucisUrl_SelectedIndexChanged);
             // 
             // metroLabel1
             // 

@@ -33,6 +33,7 @@
             this.ThemeCbn = new MetroFramework.Controls.MetroComboBox();
             this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
             this.MetroStyleManager = new MetroFramework.Components.MetroStyleManager(this.components);
+            this.metroLink1 = new MetroFramework.Controls.MetroLink();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.TryYourselfTile = new MetroFramework.Controls.MetroTile();
             this.LearnWordsTile = new MetroFramework.Controls.MetroTile();
@@ -72,6 +73,21 @@
             // MetroStyleManager
             // 
             this.MetroStyleManager.Owner = this;
+            // 
+            // metroLink1
+            // 
+            this.metroLink1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.metroLink1.DisplayFocus = true;
+            this.metroLink1.FontSize = MetroFramework.MetroLinkSize.Tall;
+            this.metroLink1.ForeColor = System.Drawing.Color.Crimson;
+            this.metroLink1.Image = ((System.Drawing.Image)(resources.GetObject("metroLink1.Image")));
+            this.metroLink1.ImageSize = 40;
+            this.metroLink1.Location = new System.Drawing.Point(420, 280);
+            this.metroLink1.Name = "metroLink1";
+            this.metroLink1.Size = new System.Drawing.Size(163, 62);
+            this.metroLink1.TabIndex = 5;
+            this.metroLink1.UseSelectable = true;
+            this.metroLink1.Click += new System.EventHandler(this.metroLink1_Click);
             // 
             // pictureBox1
             // 
@@ -155,6 +171,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(601, 369);
+            this.Controls.Add(this.metroLink1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.TryYourselfTile);
             this.Controls.Add(this.LearnWordsTile);
@@ -189,6 +206,7 @@
         private MetroFramework.Controls.MetroTile TryYourselfTile;
         private MetroFramework.Components.MetroStyleManager MetroStyleManager;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private MetroFramework.Controls.MetroLink metroLink1;
     }
 }
 

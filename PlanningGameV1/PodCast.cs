@@ -37,6 +37,7 @@ namespace PlanningGameV1
             axWindowsMediaPlayer1.URL = ListMucisUrl.SelectedItem.ToString();
             axWindowsMediaPlayer1.Ctlcontrols.stop();
         }
+
         EnglishTurkishEntities2 db = new EnglishTurkishEntities2();
         tblMusic d = new tblMusic();
         private void PodCast_Load(object sender, System.EventArgs e)
@@ -54,6 +55,11 @@ namespace PlanningGameV1
         private void PlayBtn_Click(object sender, EventArgs e)
         {
             axWindowsMediaPlayer1.Ctlcontrols.play();
+        }
+
+        private void ListMucisUrl_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
