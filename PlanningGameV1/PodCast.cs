@@ -38,7 +38,7 @@ namespace PlanningGameV1
             axWindowsMediaPlayer1.Ctlcontrols.stop();
         }
 
-        EnglishTurkishEntities2 db = new EnglishTurkishEntities2();
+        EnglishTurkishEntities10 db = new EnglishTurkishEntities10();
         tblMusic d = new tblMusic();
         private void PodCast_Load(object sender, System.EventArgs e)
         {

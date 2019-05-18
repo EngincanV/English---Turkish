@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="EnglishTurkishModel3.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+      <Schema Namespace="EnglishTurkishModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <!--Errors Found During Generation:
 warning 6013: The table/view 'EnglishTurkish.dbo.ranking' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
         <EntityType Name="ranking">
@@ -43,7 +43,7 @@ warning 6013: The table/view 'EnglishTurkish.dbo.ranking' does not have a primar
           <Property Name="sentence" Type="varchar" MaxLength="300" />
           <Property Name="IsTrue" Type="bit" />
         </EntityType>
-        <EntityContainer Name="EnglishTurkishModel3StoreContainer">
+        <EntityContainer Name="EnglishTurkishModelStoreContainer">
           <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="tblMusic" EntityType="Self.tblMusic" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="translate" EntityType="Self.translate" Schema="dbo" store:Type="Tables" />
@@ -52,7 +52,7 @@ warning 6013: The table/view 'EnglishTurkish.dbo.ranking' does not have a primar
     </edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
-      <Schema Namespace="EnglishTurkishModel3" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+      <Schema Namespace="EnglishTurkishModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
         <EntityType Name="sysdiagram">
           <Key>
             <PropertyRef Name="diagram_id" />
@@ -82,7 +82,7 @@ warning 6013: The table/view 'EnglishTurkish.dbo.ranking' does not have a primar
           <Property Name="sentence" Type="String" MaxLength="300" FixedLength="false" Unicode="false" />
           <Property Name="IsTrue" Type="Boolean" />
         </EntityType>
-        <EntityContainer Name="EnglishTurkishEntities10" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="EnglishTurkishEntities12" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagram" />
           <EntitySet Name="tblMusics" EntityType="Self.tblMusic" />
           <EntitySet Name="translates" EntityType="Self.translate" />
@@ -92,9 +92,9 @@ warning 6013: The table/view 'EnglishTurkish.dbo.ranking' does not have a primar
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="EnglishTurkishModel3StoreContainer" CdmEntityContainer="EnglishTurkishEntities10">
+        <EntityContainerMapping StorageEntityContainer="EnglishTurkishModelStoreContainer" CdmEntityContainer="EnglishTurkishEntities12">
           <EntitySetMapping Name="sysdiagrams">
-            <EntityTypeMapping TypeName="EnglishTurkishModel3.sysdiagram">
+            <EntityTypeMapping TypeName="EnglishTurkishModel.sysdiagram">
               <MappingFragment StoreEntitySet="sysdiagrams">
                 <ScalarProperty Name="name" ColumnName="name" />
                 <ScalarProperty Name="principal_id" ColumnName="principal_id" />
@@ -105,7 +105,7 @@ warning 6013: The table/view 'EnglishTurkish.dbo.ranking' does not have a primar
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="tblMusics">
-            <EntityTypeMapping TypeName="EnglishTurkishModel3.tblMusic">
+            <EntityTypeMapping TypeName="EnglishTurkishModel.tblMusic">
               <MappingFragment StoreEntitySet="tblMusic">
                 <ScalarProperty Name="musicID" ColumnName="musicID" />
                 <ScalarProperty Name="musicName" ColumnName="musicName" />
@@ -114,7 +114,7 @@ warning 6013: The table/view 'EnglishTurkish.dbo.ranking' does not have a primar
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="translates">
-            <EntityTypeMapping TypeName="EnglishTurkishModel3.translate">
+            <EntityTypeMapping TypeName="EnglishTurkishModel.translate">
               <MappingFragment StoreEntitySet="translate">
                 <ScalarProperty Name="id" ColumnName="id" />
                 <ScalarProperty Name="english" ColumnName="english" />

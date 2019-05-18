@@ -30,11 +30,14 @@
         {
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
             System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Title title1 = new System.Windows.Forms.DataVisualization.Charting.Title();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Statics));
             this.yearCmb = new MetroFramework.Controls.MetroComboBox();
             this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
             this.barChart = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.metroButton1 = new MetroFramework.Controls.MetroButton();
+            this.MBacklink = new MetroFramework.Controls.MetroLink();
             ((System.ComponentModel.ISupportInitialize)(this.barChart)).BeginInit();
             this.SuspendLayout();
             // 
@@ -68,9 +71,16 @@
             this.barChart.Legends.Add(legend1);
             this.barChart.Location = new System.Drawing.Point(246, 35);
             this.barChart.Name = "barChart";
+            series1.ChartArea = "ChartArea1";
+            series1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            series1.Legend = "Legend1";
+            series1.Name = "Success";
+            this.barChart.Series.Add(series1);
             this.barChart.Size = new System.Drawing.Size(517, 378);
             this.barChart.TabIndex = 4;
             this.barChart.Text = "chart1";
+            title1.Name = "Ranking Stats";
+            this.barChart.Titles.Add(title1);
             // 
             // metroButton1
             // 
@@ -81,18 +91,35 @@
             this.metroButton1.Text = "Bring the stats";
             this.metroButton1.UseSelectable = true;
             // 
+            // MBacklink
+            // 
+            this.MBacklink.ForeColor = System.Drawing.Color.White;
+            this.MBacklink.Image = ((System.Drawing.Image)(resources.GetObject("MBacklink.Image")));
+            this.MBacklink.ImageSize = 23;
+            this.MBacklink.Location = new System.Drawing.Point(24, 24);
+            this.MBacklink.Margin = new System.Windows.Forms.Padding(4);
+            this.MBacklink.Name = "MBacklink";
+            this.MBacklink.Size = new System.Drawing.Size(45, 32);
+            this.MBacklink.TabIndex = 13;
+            this.MBacklink.UseCustomBackColor = true;
+            this.MBacklink.UseCustomForeColor = true;
+            this.MBacklink.UseSelectable = true;
+            this.MBacklink.Click += new System.EventHandler(this.MBacklink_Click);
+            // 
             // Statics
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.MBacklink);
             this.Controls.Add(this.metroButton1);
             this.Controls.Add(this.barChart);
             this.Controls.Add(this.metroLabel2);
             this.Controls.Add(this.yearCmb);
             this.Name = "Statics";
-            this.Text = "Statics";
+            this.Text = "         Statics";
+            this.Load += new System.EventHandler(this.Statics_Load);
             ((System.ComponentModel.ISupportInitialize)(this.barChart)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -104,5 +131,6 @@
         private MetroFramework.Controls.MetroLabel metroLabel2;
         private System.Windows.Forms.DataVisualization.Charting.Chart barChart;
         private MetroFramework.Controls.MetroButton metroButton1;
+        private MetroFramework.Controls.MetroLink MBacklink;
     }
 }

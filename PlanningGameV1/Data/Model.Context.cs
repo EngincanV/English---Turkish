@@ -13,10 +13,10 @@ namespace PlanningGameV1.Data
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class EnglishTurkishEntities1 : DbContext
+    public partial class EnglishTurkishEntities10 : DbContext
     {
-        public EnglishTurkishEntities1()
-            : base("name=EnglishTurkishEntities1")
+        public EnglishTurkishEntities10()
+            : base("name=EnglishTurkishEntities10")
         {
         }
     
@@ -25,6 +25,8 @@ namespace PlanningGameV1.Data
             throw new UnintentionalCodeFirstException();
         }
     
+        public virtual DbSet<sysdiagram> sysdiagrams { get; set; }
+        public virtual DbSet<tblMusic> tblMusics { get; set; }
         public virtual DbSet<translate> translates { get; set; }
     }
 }

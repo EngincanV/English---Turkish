@@ -86,41 +86,29 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Model.edmx</DependentUpon>
     </Compile>
-    <Compile Include="Data\Model2.Context.cs">
+    <Compile Include="Data\Model1.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>Model2.Context.tt</DependentUpon>
+      <DependentUpon>Model1.Context.tt</DependentUpon>
     </Compile>
-    <Compile Include="Data\Model2.cs">
+    <Compile Include="Data\Model1.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>Model2.tt</DependentUpon>
+      <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
-    <Compile Include="Data\Model2.Designer.cs">
+    <Compile Include="Data\Model1.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>Model2.edmx</DependentUpon>
+      <DependentUpon>Model1.edmx</DependentUpon>
     </Compile>
-    <Compile Include="Data\Model3.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Model3.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Data\Model3.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Model3.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Data\Model3.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Model3.edmx</DependentUpon>
+    <Compile Include="Data\sysdiagram.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Data\tblMusic.cs">
-      <DependentUpon>Model2.tt</DependentUpon>
+      <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Data\translate.cs">
-      <DependentUpon>Model3.tt</DependentUpon>
+      <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
@@ -180,19 +168,12 @@
     <None Include="Data\Model.edmx.diagram">
       <DependentUpon>Model.edmx</DependentUpon>
     </None>
-    <EntityDeploy Include="Data\Model2.edmx">
+    <EntityDeploy Include="Data\Model1.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>Model2.Designer.cs</LastGenOutput>
+      <LastGenOutput>Model1.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <None Include="Data\Model2.edmx.diagram">
-      <DependentUpon>Model2.edmx</DependentUpon>
-    </None>
-    <EntityDeploy Include="Data\Model3.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>Model3.Designer.cs</LastGenOutput>
-    </EntityDeploy>
-    <None Include="Data\Model3.edmx.diagram">
-      <DependentUpon>Model3.edmx</DependentUpon>
+    <None Include="Data\Model1.edmx.diagram">
+      <DependentUpon>Model1.edmx</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -219,25 +200,15 @@
       <DependentUpon>Model.edmx</DependentUpon>
       <LastGenOutput>Model.cs</LastGenOutput>
     </Content>
-    <Content Include="Data\Model2.Context.tt">
+    <Content Include="Data\Model1.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>Model2.edmx</DependentUpon>
-      <LastGenOutput>Model2.Context.cs</LastGenOutput>
+      <DependentUpon>Model1.edmx</DependentUpon>
+      <LastGenOutput>Model1.Context.cs</LastGenOutput>
     </Content>
-    <Content Include="Data\Model2.tt">
+    <Content Include="Data\Model1.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>Model2.edmx</DependentUpon>
-      <LastGenOutput>Model2.cs</LastGenOutput>
-    </Content>
-    <Content Include="Data\Model3.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>Model3.edmx</DependentUpon>
-      <LastGenOutput>Model3.Context.cs</LastGenOutput>
-    </Content>
-    <Content Include="Data\Model3.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>Model3.edmx</DependentUpon>
-      <LastGenOutput>Model3.cs</LastGenOutput>
+      <DependentUpon>Model1.edmx</DependentUpon>
+      <LastGenOutput>Model1.cs</LastGenOutput>
     </Content>
     <Content Include="MetroFramework.txt" />
     <None Include="Resources\iconfinder_vector_65_02_473778.png" />

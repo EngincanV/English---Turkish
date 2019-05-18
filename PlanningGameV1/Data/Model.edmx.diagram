@@ -4,8 +4,10 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="ccd56f86fc9a40a9a83f07329ac5329b" Name="Diagram1">
-        <EntityTypeShape EntityType="EnglishTurkishModel.translate" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+      <Diagram DiagramId="2697dacdace74797a579cecaeb8b590c" Name="Diagram1">
+        <EntityTypeShape EntityType="EnglishTurkishModel3.sysdiagram" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="EnglishTurkishModel3.tblMusic" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="EnglishTurkishModel3.translate" Width="1.5" PointX="0.75" PointY="3.75" IsExpanded="true" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

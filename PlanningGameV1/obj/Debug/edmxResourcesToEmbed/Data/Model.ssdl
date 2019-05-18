@@ -1,5 +1,32 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Schema Namespace="EnglishTurkishModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+<Schema Namespace="EnglishTurkishModel3.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <!--Errors Found During Generation:
+warning 6013: The table/view 'EnglishTurkish.dbo.ranking' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="ranking">
+          <Property Name="id" Type="int" />
+          <Property Name="score" Type="int" />
+          <Property Name="knownDate" Type="timestamp" StoreGeneratedPattern="Computed" />
+          <Property Name="month" Type="int" />
+          <Property Name="year" Type="int" />
+        </EntityType>-->
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="principal_id" Type="int" Nullable="false" />
+    <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="version" Type="int" />
+    <Property Name="definition" Type="varbinary(max)" />
+  </EntityType>
+  <EntityType Name="tblMusic">
+    <Key>
+      <PropertyRef Name="musicID" />
+    </Key>
+    <Property Name="musicID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="musicName" Type="varchar" MaxLength="250" />
+    <Property Name="musicPath" Type="varchar" MaxLength="300" />
+  </EntityType>
   <EntityType Name="translate">
     <Key>
       <PropertyRef Name="id" />
@@ -9,8 +36,11 @@
     <Property Name="turkish" Type="varchar" MaxLength="150" />
     <Property Name="type" Type="varchar" MaxLength="20" />
     <Property Name="sentence" Type="varchar" MaxLength="300" />
+    <Property Name="IsTrue" Type="bit" />
   </EntityType>
-  <EntityContainer Name="EnglishTurkishModelStoreContainer">
+  <EntityContainer Name="EnglishTurkishModel3StoreContainer">
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblMusic" EntityType="Self.tblMusic" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="translate" EntityType="Self.translate" Schema="dbo" store:Type="Tables" />
   </EntityContainer>
 </Schema>

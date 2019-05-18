@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-  <EntityContainerMapping StorageEntityContainer="EnglishTurkishModel3StoreContainer" CdmEntityContainer="EnglishTurkishEntities10">
+  <EntityContainerMapping StorageEntityContainer="EnglishTurkishModelStoreContainer" CdmEntityContainer="EnglishTurkishEntities12">
     <EntitySetMapping Name="sysdiagrams">
-      <EntityTypeMapping TypeName="EnglishTurkishModel3.sysdiagram">
+      <EntityTypeMapping TypeName="EnglishTurkishModel.sysdiagram">
         <MappingFragment StoreEntitySet="sysdiagrams">
           <ScalarProperty Name="name" ColumnName="name" />
           <ScalarProperty Name="principal_id" ColumnName="principal_id" />
@@ -13,7 +13,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="tblMusics">
-      <EntityTypeMapping TypeName="EnglishTurkishModel3.tblMusic">
+      <EntityTypeMapping TypeName="EnglishTurkishModel.tblMusic">
         <MappingFragment StoreEntitySet="tblMusic">
           <ScalarProperty Name="musicID" ColumnName="musicID" />
           <ScalarProperty Name="musicName" ColumnName="musicName" />
@@ -22,7 +22,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="translates">
-      <EntityTypeMapping TypeName="EnglishTurkishModel3.translate">
+      <EntityTypeMapping TypeName="EnglishTurkishModel.translate">
         <MappingFragment StoreEntitySet="translate">
           <ScalarProperty Name="id" ColumnName="id" />
           <ScalarProperty Name="english" ColumnName="english" />

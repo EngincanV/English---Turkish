@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Schema Namespace="EnglishTurkishModel2.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+<Schema Namespace="EnglishTurkishModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
   <!--Errors Found During Generation:
 warning 6013: The table/view 'EnglishTurkish.dbo.ranking' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
         <EntityType Name="ranking">
@@ -38,7 +38,7 @@ warning 6013: The table/view 'EnglishTurkish.dbo.ranking' does not have a primar
     <Property Name="sentence" Type="varchar" MaxLength="300" />
     <Property Name="IsTrue" Type="bit" />
   </EntityType>
-  <EntityContainer Name="EnglishTurkishModel2StoreContainer">
+  <EntityContainer Name="EnglishTurkishModelStoreContainer">
     <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="tblMusic" EntityType="Self.tblMusic" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="translate" EntityType="Self.translate" Schema="dbo" store:Type="Tables" />

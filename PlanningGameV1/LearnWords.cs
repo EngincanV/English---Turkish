@@ -20,7 +20,7 @@ namespace PlanningGameV1
         public void Kelimegetir()
         {
             Random rastgele = new Random();
-            EnglishTurkishEntities3 db = new EnglishTurkishEntities3();
+            EnglishTurkishEntities10 db = new EnglishTurkishEntities10();
             translateTxt.Enabled = true;
             turkishTxt.Enabled = false;
             var count = (from a in db.translates select a).Count();
@@ -59,8 +59,9 @@ namespace PlanningGameV1
 
         private void queryBtn_Click(object sender, EventArgs e)
         {
-            using (var db = new EnglishTurkishEntities3())
+            using (var db = new EnglishTurkishEntities10())
             {
+                int count = 0;
                 var sorgu = from a in db.translates.OrderBy(p => p.english) where a.id.ToString() == idTxt.Text select a;
                 translateTxt.Text = translateTxt.Text.ToLower();
                 foreach (var item in sorgu)
@@ -81,6 +82,18 @@ namespace PlanningGameV1
                         MessageBox.Show("Yanlış Kelime Girdiniz");
                         translateTxt.Enabled = false;
                         turkishTxt.Enabled = false;
+                    }
+
+                    if(item.IsTrue == true)
+                    {
+                        count++;
+                        //var insert = new ranking()
+                        //{
+                        //    score = count,
+                        //    month = DateTime.Now.Month,
+                        //    year
+
+                        //};
                     }
                 }
                 db.SaveChanges();

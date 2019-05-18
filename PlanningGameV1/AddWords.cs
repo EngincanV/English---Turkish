@@ -13,7 +13,7 @@ namespace PlanningGameV1
 
         private void AddBtn_Click(object sender, EventArgs e)
         {
-            using (var ctx = new EnglishTurkishEntities1())
+            using (var ctx = new EnglishTurkishEntities10())
             {
                 var trans = new translate()
                 {
