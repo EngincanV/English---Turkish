@@ -1,6 +1,6 @@
 # English - Turkish Vocabulary
 
-## [First Commit](#FirstCommit)
+## [First Commit](#first-commit)
 In first version of our project, we designed the main page.
 That includes add words, podcasts, trying yourself part(this part will be 
 our test page) and learn words part. 
