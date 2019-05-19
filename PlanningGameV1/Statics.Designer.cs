@@ -28,17 +28,17 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Title title1 = new System.Windows.Forms.DataVisualization.Charting.Title();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Statics));
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Title title2 = new System.Windows.Forms.DataVisualization.Charting.Title();
             this.yearCmb = new MetroFramework.Controls.MetroComboBox();
             this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
-            this.barChart = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.metroButton1 = new MetroFramework.Controls.MetroButton();
             this.MBacklink = new MetroFramework.Controls.MetroLink();
-            ((System.ComponentModel.ISupportInitialize)(this.barChart)).BeginInit();
+            this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
             this.SuspendLayout();
             // 
             // yearCmb
@@ -63,25 +63,6 @@
             this.metroLabel2.TabIndex = 3;
             this.metroLabel2.Text = "Year:";
             // 
-            // barChart
-            // 
-            chartArea1.Name = "ChartArea1";
-            this.barChart.ChartAreas.Add(chartArea1);
-            legend1.Name = "Legend1";
-            this.barChart.Legends.Add(legend1);
-            this.barChart.Location = new System.Drawing.Point(246, 35);
-            this.barChart.Name = "barChart";
-            series1.ChartArea = "ChartArea1";
-            series1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            series1.Legend = "Legend1";
-            series1.Name = "Success";
-            this.barChart.Series.Add(series1);
-            this.barChart.Size = new System.Drawing.Size(517, 378);
-            this.barChart.TabIndex = 4;
-            this.barChart.Text = "chart1";
-            title1.Name = "Ranking Stats";
-            this.barChart.Titles.Add(title1);
-            // 
             // metroButton1
             // 
             this.metroButton1.Location = new System.Drawing.Point(82, 248);
@@ -90,6 +71,7 @@
             this.metroButton1.TabIndex = 5;
             this.metroButton1.Text = "Bring the stats";
             this.metroButton1.UseSelectable = true;
+            this.metroButton1.Click += new System.EventHandler(this.metroButton1_Click);
             // 
             // MBacklink
             // 
@@ -106,21 +88,40 @@
             this.MBacklink.UseSelectable = true;
             this.MBacklink.Click += new System.EventHandler(this.MBacklink_Click);
             // 
+            // chart1
+            // 
+            chartArea2.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea2);
+            legend2.Name = "Legend1";
+            this.chart1.Legends.Add(legend2);
+            this.chart1.Location = new System.Drawing.Point(276, 34);
+            this.chart1.Name = "chart1";
+            series2.ChartArea = "ChartArea1";
+            series2.Color = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            series2.Legend = "Legend1";
+            series2.Name = "Score";
+            this.chart1.Series.Add(series2);
+            this.chart1.Size = new System.Drawing.Size(482, 375);
+            this.chart1.TabIndex = 14;
+            this.chart1.Text = "chart1";
+            title2.Name = "Ranking Stats";
+            this.chart1.Titles.Add(title2);
+            // 
             // Statics
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.chart1);
             this.Controls.Add(this.MBacklink);
             this.Controls.Add(this.metroButton1);
-            this.Controls.Add(this.barChart);
             this.Controls.Add(this.metroLabel2);
             this.Controls.Add(this.yearCmb);
             this.Name = "Statics";
             this.Text = "         Statics";
             this.Load += new System.EventHandler(this.Statics_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.barChart)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -129,8 +130,8 @@
         #endregion
         private MetroFramework.Controls.MetroComboBox yearCmb;
         private MetroFramework.Controls.MetroLabel metroLabel2;
-        private System.Windows.Forms.DataVisualization.Charting.Chart barChart;
         private MetroFramework.Controls.MetroButton metroButton1;
         private MetroFramework.Controls.MetroLink MBacklink;
+        private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
     }
 }

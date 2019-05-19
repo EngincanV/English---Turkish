@@ -31,7 +31,7 @@ namespace PlanningGameV1
             {
                 if (item.IsTrue==null)
                 {
-                    MessageBox.Show("Başka Değer Yoktur Devam Etmek İçin Kelime Yerine Dönünüz");
+                    MessageBox.Show("There isn't other value, return to words section for continue");
                 }
                 if (item.IsTrue==true)
                 {
@@ -57,7 +57,7 @@ namespace PlanningGameV1
             Kelimegetir();
         }
 
-        private void queryBtn_Click(object sender, EventArgs e)
+        public void QueryWords()
         {
             using (var db = new EnglishTurkishEntities10())
             {
@@ -66,10 +66,10 @@ namespace PlanningGameV1
                 translateTxt.Text = translateTxt.Text.ToLower();
                 foreach (var item in sorgu)
                 {
-                    if (translateTxt.Text==item.english.ToLower())
+                    if (translateTxt.Text == item.english.ToLower())
                     {
                         MessageBox.Show("Başarılı");
-                        turkishTxt.Text = "";
+                        turkishTxt.Text ="";
                         translateTxt.Text = "";
                         vocabularyTxt.Text = "";
                         sentenceTxt.Text = "";
@@ -84,7 +84,7 @@ namespace PlanningGameV1
                         turkishTxt.Enabled = false;
                     }
 
-                    if(item.IsTrue == true)
+                    if (item.IsTrue == true)
                     {
                         count++;
                         //var insert = new ranking()
@@ -92,12 +92,16 @@ namespace PlanningGameV1
                         //    score = count,
                         //    month = DateTime.Now.Month,
                         //    year
-
                         //};
                     }
                 }
                 db.SaveChanges();
             }
+        }
+
+        private void queryBtn_Click(object sender, EventArgs e)
+        {
+            QueryWords();
         }
 
         private void MBacklink_Click(object sender, EventArgs e)

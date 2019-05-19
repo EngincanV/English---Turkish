@@ -11,6 +11,11 @@ namespace PlanningGameV1
             InitializeComponent();
         }
 
+        public bool CheckSpaces(string text)
+        {
+            return string.IsNullOrWhiteSpace(text);
+        }
+
         private void AddBtn_Click(object sender, EventArgs e)
         {
             using (var ctx = new EnglishTurkishEntities10())
@@ -23,11 +28,10 @@ namespace PlanningGameV1
                     sentence = sentenceTxt.Text,
                     IsTrue = false,
                 };
-                if (string.IsNullOrWhiteSpace(englishTxt.Text) || string.IsNullOrWhiteSpace(turkishTxt.Text) || string.IsNullOrWhiteSpace(typeTxt.Text) || string.IsNullOrWhiteSpace(sentenceTxt.Text))
+                if (CheckSpaces(trans.english) || CheckSpaces(trans.turkish) || CheckSpaces(trans.type) || CheckSpaces(trans.sentence))
                 {
                     MessageBox.Show("You must fill in the all empty fields");
                 }
-                
                 else
                 {
                     ctx.translates.Add(trans);
@@ -38,7 +42,6 @@ namespace PlanningGameV1
                     turkishTxt.Text = "";
                     typeTxt.Text = "";
                 }
-
             }
         }
 

@@ -42,9 +42,8 @@ namespace PlanningGameV1
         tblMusic d = new tblMusic();
         private void PodCast_Load(object sender, System.EventArgs e)
         {
-            //linq to sql query
-            var mucis = from a in db.tblMusics select a;
-            foreach (var item in mucis)
+            var musics = from a in db.tblMusics select a;
+            foreach (var item in musics)
             {
                 ListMucisUrl.Items.Add(item.musicPath);
                 ListMusic.Items.Add(item.musicName);
@@ -55,11 +54,6 @@ namespace PlanningGameV1
         private void PlayBtn_Click(object sender, EventArgs e)
         {
             axWindowsMediaPlayer1.Ctlcontrols.play();
-        }
-
-        private void ListMucisUrl_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
         }
     }
 }
