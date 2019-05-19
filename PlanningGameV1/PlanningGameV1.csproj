@@ -110,6 +110,11 @@
     <Compile Include="Data\translate.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Compile Include="EnglishTurkishDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EnglishTurkishDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -174,6 +179,17 @@
     </EntityDeploy>
     <None Include="Data\Model1.edmx.diagram">
       <DependentUpon>Model1.edmx</DependentUpon>
+    </None>
+    <None Include="EnglishTurkishDataSet.xsc">
+      <DependentUpon>EnglishTurkishDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="EnglishTurkishDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>EnglishTurkishDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="EnglishTurkishDataSet.xss">
+      <DependentUpon>EnglishTurkishDataSet.xsd</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

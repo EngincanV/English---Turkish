@@ -8,7 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using System.Data.SqlClient;
 namespace PlanningGameV1
 {
     public partial class LearnWords : Form
@@ -52,23 +52,54 @@ namespace PlanningGameV1
             }
         }
 
+        #region SqlClasses
+        SqlCommand command;
+        SqlDataAdapter adapter = new SqlDataAdapter();
+        SqlConnection conn; 
+        #endregion
+
         private void fetchBtn_Click(object sender, EventArgs e)
         {
             Kelimegetir();
         }
 
+        public void InsertData()
+        {
+            int count = 0;
+            count++;
+            try
+            {
+                string connectionString;
+
+                connectionString =
+                    @"Data Source=DESKTOP-5L02G6P\SQLEXPRESS;Initial Catalog=EnglishTurkish;Integrated Security=True";
+                conn = new SqlConnection(connectionString);
+                conn.Open();
+                
+                string sql = "INSERT INTO dbo.ranking(score, month, year) values(" + count + ", " + DateTime.Now.Month + ", " + DateTime.Now.Year + ")";
+                command = new SqlCommand(sql, conn);
+                adapter.InsertCommand = new SqlCommand(sql, conn);
+                adapter.InsertCommand.ExecuteNonQuery();
+
+                command.Dispose();
+                conn.Close();
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+        }
         public void QueryWords()
         {
             using (var db = new EnglishTurkishEntities10())
             {
-                int count = 0;
                 var sorgu = from a in db.translates.OrderBy(p => p.english) where a.id.ToString() == idTxt.Text select a;
                 translateTxt.Text = translateTxt.Text.ToLower();
                 foreach (var item in sorgu)
                 {
                     if (translateTxt.Text == item.english.ToLower())
                     {
-                        MessageBox.Show("Başarılı");
+                        MessageBox.Show("Successfully!");
                         turkishTxt.Text ="";
                         translateTxt.Text = "";
                         vocabularyTxt.Text = "";
@@ -79,20 +110,14 @@ namespace PlanningGameV1
                     }
                     else
                     {
-                        MessageBox.Show("Yanlış Kelime Girdiniz");
+                        MessageBox.Show("You type a wrong word!");
                         translateTxt.Enabled = false;
                         turkishTxt.Enabled = false;
                     }
 
                     if (item.IsTrue == true)
                     {
-                        count++;
-                        //var insert = new ranking()
-                        //{
-                        //    score = count,
-                        //    month = DateTime.Now.Month,
-                        //    year
-                        //};
+                        InsertData();
                     }
                 }
                 db.SaveChanges();
