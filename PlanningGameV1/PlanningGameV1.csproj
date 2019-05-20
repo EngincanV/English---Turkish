@@ -101,14 +101,29 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Model1.edmx</DependentUpon>
     </Compile>
+    <Compile Include="Data\Model3.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model3.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Model3.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model3.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Model3.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model3.edmx</DependentUpon>
+    </Compile>
     <Compile Include="Data\sysdiagram.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>Model3.tt</DependentUpon>
     </Compile>
     <Compile Include="Data\tblMusic.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>Model3.tt</DependentUpon>
     </Compile>
     <Compile Include="Data\translate.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>Model3.tt</DependentUpon>
     </Compile>
     <Compile Include="EnglishTurkishDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -141,6 +156,12 @@
     <Compile Include="Statics.Designer.cs">
       <DependentUpon>Statics.cs</DependentUpon>
     </Compile>
+    <Compile Include="TryYourself.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TryYourself.Designer.cs">
+      <DependentUpon>TryYourself.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="AddWords.resx">
       <DependentUpon>AddWords.cs</DependentUpon>
     </EmbeddedResource>
@@ -166,6 +187,9 @@
     <EmbeddedResource Include="Statics.resx">
       <DependentUpon>Statics.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="TryYourself.resx">
+      <DependentUpon>TryYourself.cs</DependentUpon>
+    </EmbeddedResource>
     <EntityDeploy Include="Data\Model.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>Model.Designer.cs</LastGenOutput>
@@ -179,6 +203,13 @@
     </EntityDeploy>
     <None Include="Data\Model1.edmx.diagram">
       <DependentUpon>Model1.edmx</DependentUpon>
+    </None>
+    <EntityDeploy Include="Data\Model3.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Model3.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="Data\Model3.edmx.diagram">
+      <DependentUpon>Model3.edmx</DependentUpon>
     </None>
     <None Include="EnglishTurkishDataSet.xsc">
       <DependentUpon>EnglishTurkishDataSet.xsd</DependentUpon>
@@ -225,6 +256,16 @@
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>Model1.edmx</DependentUpon>
       <LastGenOutput>Model1.cs</LastGenOutput>
+    </Content>
+    <Content Include="Data\Model3.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Model3.edmx</DependentUpon>
+      <LastGenOutput>Model3.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Data\Model3.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Model3.edmx</DependentUpon>
+      <LastGenOutput>Model3.cs</LastGenOutput>
     </Content>
     <Content Include="MetroFramework.txt" />
     <None Include="Resources\iconfinder_vector_65_02_473778.png" />

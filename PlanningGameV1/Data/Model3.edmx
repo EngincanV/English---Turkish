@@ -1,0 +1,165 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="EnglishTurkishModel1.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <!--Errors Found During Generation:
+warning 6013: The table/view 'EnglishTurkish.dbo.ranking' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="ranking">
+          <Property Name="score" Type="int" />
+          <Property Name="knownDate" Type="timestamp" StoreGeneratedPattern="Computed" />
+          <Property Name="month" Type="int" />
+          <Property Name="year" Type="int" />
+        </EntityType>-->
+        <EntityType Name="sysdiagrams">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="principal_id" Type="int" Nullable="false" />
+          <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="version" Type="int" />
+          <Property Name="definition" Type="varbinary(max)" />
+        </EntityType>
+        <EntityType Name="tblMusic">
+          <Key>
+            <PropertyRef Name="musicID" />
+          </Key>
+          <Property Name="musicID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="musicName" Type="varchar" MaxLength="250" />
+          <Property Name="musicPath" Type="varchar" MaxLength="300" />
+        </EntityType>
+        <EntityType Name="translate">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="english" Type="varchar" MaxLength="150" />
+          <Property Name="turkish" Type="varchar" MaxLength="150" />
+          <Property Name="type" Type="varchar" MaxLength="20" />
+          <Property Name="sentence" Type="varchar" MaxLength="300" />
+          <Property Name="IsTrue" Type="bit" />
+          <Property Name="translateLevel" Type="int" />
+          <Property Name="level1" Type="date" />
+          <Property Name="level2" Type="date" />
+          <Property Name="level3" Type="date" />
+          <Property Name="level4" Type="date" />
+        </EntityType>
+        <EntityContainer Name="EnglishTurkishModel1StoreContainer">
+          <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tblMusic" EntityType="Self.tblMusic" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="translate" EntityType="Self.translate" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="EnglishTurkishModel1" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="sysdiagram">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="principal_id" Type="Int32" Nullable="false" />
+          <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="version" Type="Int32" />
+          <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="tblMusic">
+          <Key>
+            <PropertyRef Name="musicID" />
+          </Key>
+          <Property Name="musicID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="musicName" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+          <Property Name="musicPath" Type="String" MaxLength="300" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="translate">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="english" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+          <Property Name="turkish" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+          <Property Name="type" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="sentence" Type="String" MaxLength="300" FixedLength="false" Unicode="false" />
+          <Property Name="IsTrue" Type="Boolean" />
+          <Property Name="translateLevel" Type="Int32" />
+          <Property Name="level1" Type="DateTime" Precision="0" />
+          <Property Name="level2" Type="DateTime" Precision="0" />
+          <Property Name="level3" Type="DateTime" Precision="0" />
+          <Property Name="level4" Type="DateTime" Precision="0" />
+        </EntityType>
+        <EntityContainer Name="EnglishTurkishEntities13" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagram" />
+          <EntitySet Name="tblMusics" EntityType="Self.tblMusic" />
+          <EntitySet Name="translates" EntityType="Self.translate" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="EnglishTurkishModel1StoreContainer" CdmEntityContainer="EnglishTurkishEntities13">
+          <EntitySetMapping Name="sysdiagrams">
+            <EntityTypeMapping TypeName="EnglishTurkishModel1.sysdiagram">
+              <MappingFragment StoreEntitySet="sysdiagrams">
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+                <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+                <ScalarProperty Name="version" ColumnName="version" />
+                <ScalarProperty Name="definition" ColumnName="definition" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tblMusics">
+            <EntityTypeMapping TypeName="EnglishTurkishModel1.tblMusic">
+              <MappingFragment StoreEntitySet="tblMusic">
+                <ScalarProperty Name="musicID" ColumnName="musicID" />
+                <ScalarProperty Name="musicName" ColumnName="musicName" />
+                <ScalarProperty Name="musicPath" ColumnName="musicPath" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="translates">
+            <EntityTypeMapping TypeName="EnglishTurkishModel1.translate">
+              <MappingFragment StoreEntitySet="translate">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="english" ColumnName="english" />
+                <ScalarProperty Name="turkish" ColumnName="turkish" />
+                <ScalarProperty Name="type" ColumnName="type" />
+                <ScalarProperty Name="sentence" ColumnName="sentence" />
+                <ScalarProperty Name="IsTrue" ColumnName="IsTrue" />
+                <ScalarProperty Name="translateLevel" ColumnName="translateLevel" />
+                <ScalarProperty Name="level1" ColumnName="level1" />
+                <ScalarProperty Name="level2" ColumnName="level2" />
+                <ScalarProperty Name="level3" ColumnName="level3" />
+                <ScalarProperty Name="level4" ColumnName="level4" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

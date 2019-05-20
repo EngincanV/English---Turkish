@@ -79,6 +79,7 @@ namespace PlanningGameV1
                 {
                     this.chart1.Series["Score"].Points.AddXY(months[k], pointsArray[k]);
                 }
+                chart1.Series["Score"]["PixelPointWidth"] = "13";
                 MessageBox.Show(output);
                 dataReader.Close();
                 command.Dispose();

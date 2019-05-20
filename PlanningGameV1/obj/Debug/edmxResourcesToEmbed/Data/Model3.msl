@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-  <EntityContainerMapping StorageEntityContainer="EnglishTurkishModel2StoreContainer" CdmEntityContainer="EnglishTurkishEntities7">
+  <EntityContainerMapping StorageEntityContainer="EnglishTurkishModel1StoreContainer" CdmEntityContainer="EnglishTurkishEntities13">
     <EntitySetMapping Name="sysdiagrams">
-      <EntityTypeMapping TypeName="EnglishTurkishModel2.sysdiagram">
+      <EntityTypeMapping TypeName="EnglishTurkishModel1.sysdiagram">
         <MappingFragment StoreEntitySet="sysdiagrams">
           <ScalarProperty Name="name" ColumnName="name" />
           <ScalarProperty Name="principal_id" ColumnName="principal_id" />
@@ -13,7 +13,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="tblMusics">
-      <EntityTypeMapping TypeName="EnglishTurkishModel2.tblMusic">
+      <EntityTypeMapping TypeName="EnglishTurkishModel1.tblMusic">
         <MappingFragment StoreEntitySet="tblMusic">
           <ScalarProperty Name="musicID" ColumnName="musicID" />
           <ScalarProperty Name="musicName" ColumnName="musicName" />
@@ -22,7 +22,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="translates">
-      <EntityTypeMapping TypeName="EnglishTurkishModel2.translate">
+      <EntityTypeMapping TypeName="EnglishTurkishModel1.translate">
         <MappingFragment StoreEntitySet="translate">
           <ScalarProperty Name="id" ColumnName="id" />
           <ScalarProperty Name="english" ColumnName="english" />
@@ -30,6 +30,11 @@
           <ScalarProperty Name="type" ColumnName="type" />
           <ScalarProperty Name="sentence" ColumnName="sentence" />
           <ScalarProperty Name="IsTrue" ColumnName="IsTrue" />
+          <ScalarProperty Name="translateLevel" ColumnName="translateLevel" />
+          <ScalarProperty Name="level1" ColumnName="level1" />
+          <ScalarProperty Name="level2" ColumnName="level2" />
+          <ScalarProperty Name="level3" ColumnName="level3" />
+          <ScalarProperty Name="level4" ColumnName="level4" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

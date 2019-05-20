@@ -90,14 +90,18 @@
             // 
             // chart1
             // 
+            this.chart1.BorderlineWidth = 2;
             chartArea1.Name = "ChartArea1";
             this.chart1.ChartAreas.Add(chartArea1);
             legend1.Name = "Legend1";
             this.chart1.Legends.Add(legend1);
             this.chart1.Location = new System.Drawing.Point(293, 24);
             this.chart1.Name = "chart1";
+            series1.BorderWidth = 2;
             series1.ChartArea = "ChartArea1";
+            series1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             series1.Legend = "Legend1";
+            series1.MarkerSize = 10;
             series1.Name = "Score";
             this.chart1.Series.Add(series1);
             this.chart1.Size = new System.Drawing.Size(484, 385);

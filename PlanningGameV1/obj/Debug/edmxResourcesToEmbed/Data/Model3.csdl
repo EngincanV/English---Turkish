@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Schema Namespace="EnglishTurkishModel2" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+<Schema Namespace="EnglishTurkishModel1" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
   <EntityType Name="sysdiagram">
     <Key>
       <PropertyRef Name="diagram_id" />
@@ -28,8 +28,13 @@
     <Property Name="type" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
     <Property Name="sentence" Type="String" MaxLength="300" FixedLength="false" Unicode="false" />
     <Property Name="IsTrue" Type="Boolean" />
+    <Property Name="translateLevel" Type="Int32" />
+    <Property Name="level1" Type="DateTime" Precision="0" />
+    <Property Name="level2" Type="DateTime" Precision="0" />
+    <Property Name="level3" Type="DateTime" Precision="0" />
+    <Property Name="level4" Type="DateTime" Precision="0" />
   </EntityType>
-  <EntityContainer Name="EnglishTurkishEntities7" annotation:LazyLoadingEnabled="true">
+  <EntityContainer Name="EnglishTurkishEntities13" annotation:LazyLoadingEnabled="true">
     <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagram" />
     <EntitySet Name="tblMusics" EntityType="Self.tblMusic" />
     <EntitySet Name="translates" EntityType="Self.translate" />

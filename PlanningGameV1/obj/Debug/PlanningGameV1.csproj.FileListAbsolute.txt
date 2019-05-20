@@ -96,3 +96,4 @@ C:\Users\engin\OneDrive\Masaüstü\English---Turkish\PlanningGameV1\obj\Debug\Pl
 C:\Users\engin\OneDrive\Masaüstü\English---Turkish\PlanningGameV1\obj\Debug\PlanningGameV1.pdb
 C:\Users\engin\OneDrive\Masaüstü\English---Turkish\PlanningGameV1\obj\Debug\PlanningGameV1.LearnWords.resources
 C:\Users\engin\OneDrive\Masaüstü\English---Turkish\PlanningGameV1\obj\Debug\PlanningGameV1.Statics.resources
+C:\Users\engin\OneDrive\Masaüstü\English---Turkish\PlanningGameV1\obj\Debug\PlanningGameV1.TryYourself.resources

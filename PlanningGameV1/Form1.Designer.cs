@@ -115,6 +115,7 @@
             this.TryYourselfTile.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Regular;
             this.TryYourselfTile.UseSelectable = true;
             this.TryYourselfTile.UseTileImage = true;
+            this.TryYourselfTile.Click += new System.EventHandler(this.TryYourselfTile_Click);
             // 
             // LearnWordsTile
             // 

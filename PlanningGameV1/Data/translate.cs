@@ -20,5 +20,10 @@ namespace PlanningGameV1.Data
         public string type { get; set; }
         public string sentence { get; set; }
         public Nullable<bool> IsTrue { get; set; }
+        public Nullable<int> translateLevel { get; set; }
+        public Nullable<System.DateTime> level1 { get; set; }
+        public Nullable<System.DateTime> level2 { get; set; }
+        public Nullable<System.DateTime> level3 { get; set; }
+        public Nullable<System.DateTime> level4 { get; set; }
     }
 }

@@ -61,5 +61,12 @@ namespace PlanningGameV1
             s.Show();
             this.Hide();
         }
+
+        private void TryYourselfTile_Click(object sender, EventArgs e)
+        {
+            TryYourself frm = new TryYourself();
+            frm.Show();
+            this.Hide();
+        }
     }
 }

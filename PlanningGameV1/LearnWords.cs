@@ -9,6 +9,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using System.Threading;
+
 namespace PlanningGameV1
 {
     public partial class LearnWords : Form
@@ -25,28 +27,27 @@ namespace PlanningGameV1
             turkishTxt.Enabled = false;
             var count = (from a in db.translates select a).Count();
             int Id = rastgele.Next(0, count);
-            var sorgu = from a in db.translates.OrderBy(p => p.english) where a.id == Id && a.IsTrue==false select a;
+            var sorgu = from a in db.translates.OrderBy(p => p.english) where a.id == Id && a.IsTrue == false select a;
             int sayac = 0;
             foreach (var item in sorgu)
             {
-                if (item.IsTrue==null)
+                if (item.IsTrue == null)
                 {
                     MessageBox.Show("There isn't other value, return to words section for continue");
                 }
-                if (item.IsTrue==true)
+                if (item.IsTrue == true)
                 {
                     break;
                 }
-                else if (item.IsTrue==false)
+                else if (item.IsTrue == false)
                 {
                     turkishTxt.Text = item.turkish.ToString();
                     idTxt.Text = item.id.ToString();
-                    //sentenceTxt.Text = item.sentence.ToString(); // Cümle Eklenecek
                     vocabularyTxt.Text = item.type.ToString();
                 }
                 sayac++;
             }
-            if (sayac==0)
+            if (sayac == 0)
             {
                 Kelimegetir();
             }
@@ -55,7 +56,7 @@ namespace PlanningGameV1
         #region SqlClasses
         SqlCommand command;
         SqlDataAdapter adapter = new SqlDataAdapter();
-        SqlConnection conn; 
+        SqlConnection conn;
         #endregion
 
         private void fetchBtn_Click(object sender, EventArgs e)
@@ -75,7 +76,7 @@ namespace PlanningGameV1
                     @"Data Source=DESKTOP-5L02G6P\SQLEXPRESS;Initial Catalog=EnglishTurkish;Integrated Security=True";
                 conn = new SqlConnection(connectionString);
                 conn.Open();
-                
+
                 string sql = "INSERT INTO dbo.ranking(score, month, year) values(" + count + ", " + DateTime.Now.Month + ", " + DateTime.Now.Year + ")";
                 command = new SqlCommand(sql, conn);
                 adapter.InsertCommand = new SqlCommand(sql, conn);
@@ -91,7 +92,7 @@ namespace PlanningGameV1
         }
         public void QueryWords()
         {
-            using (var db = new EnglishTurkishEntities10())
+            using (var db = new EnglishTurkishEntities13())
             {
                 var sorgu = from a in db.translates.OrderBy(p => p.english) where a.id.ToString() == idTxt.Text select a;
                 translateTxt.Text = translateTxt.Text.ToLower();
@@ -99,14 +100,18 @@ namespace PlanningGameV1
                 {
                     if (translateTxt.Text == item.english.ToLower())
                     {
-                        MessageBox.Show("Successfully!");
-                        turkishTxt.Text ="";
+                        turkishTxt.Text = "";
                         translateTxt.Text = "";
                         vocabularyTxt.Text = "";
-                        sentenceTxt.Text = "";
+                        sentenceTxt.Text = item.sentence.ToString();
                         turkishTxt.Enabled = false;
                         translateTxt.Enabled = false;
                         item.IsTrue = true;
+                        item.translateLevel = 1;
+                        item.level1 = DateTime.Now;
+                        MessageBox.Show("Kelime bir gün sonra tekrar sorulacak");
+                        Thread.Sleep(2000);
+                        sentenceTxt.Text = "";
                     }
                     else
                     {

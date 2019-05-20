@@ -232,7 +232,7 @@
             this.MBacklink.ForeColor = System.Drawing.Color.White;
             this.MBacklink.Image = ((System.Drawing.Image)(resources.GetObject("MBacklink.Image")));
             this.MBacklink.ImageSize = 23;
-            this.MBacklink.Location = new System.Drawing.Point(28, 13);
+            this.MBacklink.Location = new System.Drawing.Point(62, 40);
             this.MBacklink.Margin = new System.Windows.Forms.Padding(4);
             this.MBacklink.Name = "MBacklink";
             this.MBacklink.Size = new System.Drawing.Size(45, 32);
